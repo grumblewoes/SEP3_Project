@@ -11,8 +11,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
 
+
     <ItemGroup>
-      <Folder Include="Controllers\" />
+      <ProjectReference Include="..\ApplicationLogic\ApplicationLogic.csproj" />
     </ItemGroup>
 
 </Project>
