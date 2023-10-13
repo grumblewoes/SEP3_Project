@@ -1,4 +1,6 @@
 using ApplicationLogic.LogicInterfaces;
+using Domain.DTOs;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -13,4 +15,21 @@ public class ProductController : ControllerBase
     {
         this.productLogic = productLogic;
     }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Product>>> GetAsync([FromQuery] string? titleContains)
+    {
+        try
+        {
+            SearchProductParamsDto parameters = new(titleContains);
+            var products = await productLogic.GetAsync(parameters);
+            return Ok(products);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
 }
