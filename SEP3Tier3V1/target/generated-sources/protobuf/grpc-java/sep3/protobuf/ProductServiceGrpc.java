@@ -18,29 +18,29 @@ public final class ProductServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "ProductService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<sep3.protobuf.Product,
-      com.google.protobuf.Int32Value> getAddProductMethod;
+  private static volatile io.grpc.MethodDescriptor<sep3.protobuf.RequestAddProduct,
+      sep3.protobuf.ProductData> getAddProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "addProduct",
-      requestType = sep3.protobuf.Product.class,
-      responseType = com.google.protobuf.Int32Value.class,
+      requestType = sep3.protobuf.RequestAddProduct.class,
+      responseType = sep3.protobuf.ProductData.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<sep3.protobuf.Product,
-      com.google.protobuf.Int32Value> getAddProductMethod() {
-    io.grpc.MethodDescriptor<sep3.protobuf.Product, com.google.protobuf.Int32Value> getAddProductMethod;
+  public static io.grpc.MethodDescriptor<sep3.protobuf.RequestAddProduct,
+      sep3.protobuf.ProductData> getAddProductMethod() {
+    io.grpc.MethodDescriptor<sep3.protobuf.RequestAddProduct, sep3.protobuf.ProductData> getAddProductMethod;
     if ((getAddProductMethod = ProductServiceGrpc.getAddProductMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
         if ((getAddProductMethod = ProductServiceGrpc.getAddProductMethod) == null) {
           ProductServiceGrpc.getAddProductMethod = getAddProductMethod =
-              io.grpc.MethodDescriptor.<sep3.protobuf.Product, com.google.protobuf.Int32Value>newBuilder()
+              io.grpc.MethodDescriptor.<sep3.protobuf.RequestAddProduct, sep3.protobuf.ProductData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sep3.protobuf.Product.getDefaultInstance()))
+                  sep3.protobuf.RequestAddProduct.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Int32Value.getDefaultInstance()))
+                  sep3.protobuf.ProductData.getDefaultInstance()))
               .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("addProduct"))
               .build();
         }
@@ -49,35 +49,35 @@ public final class ProductServiceGrpc {
     return getAddProductMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
-      sep3.protobuf.Product> getGetProductMethod;
+  private static volatile io.grpc.MethodDescriptor<sep3.protobuf.RequestGetProducts,
+      sep3.protobuf.ResponseGetProducts> getGetProductsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getProduct",
-      requestType = com.google.protobuf.Int32Value.class,
-      responseType = sep3.protobuf.Product.class,
+      fullMethodName = SERVICE_NAME + '/' + "getProducts",
+      requestType = sep3.protobuf.RequestGetProducts.class,
+      responseType = sep3.protobuf.ResponseGetProducts.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
-      sep3.protobuf.Product> getGetProductMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Int32Value, sep3.protobuf.Product> getGetProductMethod;
-    if ((getGetProductMethod = ProductServiceGrpc.getGetProductMethod) == null) {
+  public static io.grpc.MethodDescriptor<sep3.protobuf.RequestGetProducts,
+      sep3.protobuf.ResponseGetProducts> getGetProductsMethod() {
+    io.grpc.MethodDescriptor<sep3.protobuf.RequestGetProducts, sep3.protobuf.ResponseGetProducts> getGetProductsMethod;
+    if ((getGetProductsMethod = ProductServiceGrpc.getGetProductsMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
-        if ((getGetProductMethod = ProductServiceGrpc.getGetProductMethod) == null) {
-          ProductServiceGrpc.getGetProductMethod = getGetProductMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Int32Value, sep3.protobuf.Product>newBuilder()
+        if ((getGetProductsMethod = ProductServiceGrpc.getGetProductsMethod) == null) {
+          ProductServiceGrpc.getGetProductsMethod = getGetProductsMethod =
+              io.grpc.MethodDescriptor.<sep3.protobuf.RequestGetProducts, sep3.protobuf.ResponseGetProducts>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProduct"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProducts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Int32Value.getDefaultInstance()))
+                  sep3.protobuf.RequestGetProducts.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sep3.protobuf.Product.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getProduct"))
+                  sep3.protobuf.ResponseGetProducts.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getProducts"))
               .build();
         }
       }
     }
-    return getGetProductMethod;
+    return getGetProductsMethod;
   }
 
   /**
@@ -133,16 +133,16 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    default void addProduct(sep3.protobuf.Product request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Int32Value> responseObserver) {
+    default void addProduct(sep3.protobuf.RequestAddProduct request,
+        io.grpc.stub.StreamObserver<sep3.protobuf.ProductData> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddProductMethod(), responseObserver);
     }
 
     /**
      */
-    default void getProduct(com.google.protobuf.Int32Value request,
-        io.grpc.stub.StreamObserver<sep3.protobuf.Product> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductMethod(), responseObserver);
+    default void getProducts(sep3.protobuf.RequestGetProducts request,
+        io.grpc.stub.StreamObserver<sep3.protobuf.ResponseGetProducts> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsMethod(), responseObserver);
     }
   }
 
@@ -181,18 +181,18 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public void addProduct(sep3.protobuf.Product request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Int32Value> responseObserver) {
+    public void addProduct(sep3.protobuf.RequestAddProduct request,
+        io.grpc.stub.StreamObserver<sep3.protobuf.ProductData> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddProductMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getProduct(com.google.protobuf.Int32Value request,
-        io.grpc.stub.StreamObserver<sep3.protobuf.Product> responseObserver) {
+    public void getProducts(sep3.protobuf.RequestGetProducts request,
+        io.grpc.stub.StreamObserver<sep3.protobuf.ResponseGetProducts> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetProductMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetProductsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -217,16 +217,16 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Int32Value addProduct(sep3.protobuf.Product request) {
+    public sep3.protobuf.ProductData addProduct(sep3.protobuf.RequestAddProduct request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddProductMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public sep3.protobuf.Product getProduct(com.google.protobuf.Int32Value request) {
+    public sep3.protobuf.ResponseGetProducts getProducts(sep3.protobuf.RequestGetProducts request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProductMethod(), getCallOptions(), request);
+          getChannel(), getGetProductsMethod(), getCallOptions(), request);
     }
   }
 
@@ -251,23 +251,23 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Int32Value> addProduct(
-        sep3.protobuf.Product request) {
+    public com.google.common.util.concurrent.ListenableFuture<sep3.protobuf.ProductData> addProduct(
+        sep3.protobuf.RequestAddProduct request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddProductMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<sep3.protobuf.Product> getProduct(
-        com.google.protobuf.Int32Value request) {
+    public com.google.common.util.concurrent.ListenableFuture<sep3.protobuf.ResponseGetProducts> getProducts(
+        sep3.protobuf.RequestGetProducts request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetProductMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetProductsMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_ADD_PRODUCT = 0;
-  private static final int METHODID_GET_PRODUCT = 1;
+  private static final int METHODID_GET_PRODUCTS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -287,12 +287,12 @@ public final class ProductServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ADD_PRODUCT:
-          serviceImpl.addProduct((sep3.protobuf.Product) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Int32Value>) responseObserver);
+          serviceImpl.addProduct((sep3.protobuf.RequestAddProduct) request,
+              (io.grpc.stub.StreamObserver<sep3.protobuf.ProductData>) responseObserver);
           break;
-        case METHODID_GET_PRODUCT:
-          serviceImpl.getProduct((com.google.protobuf.Int32Value) request,
-              (io.grpc.stub.StreamObserver<sep3.protobuf.Product>) responseObserver);
+        case METHODID_GET_PRODUCTS:
+          serviceImpl.getProducts((sep3.protobuf.RequestGetProducts) request,
+              (io.grpc.stub.StreamObserver<sep3.protobuf.ResponseGetProducts>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -316,16 +316,16 @@ public final class ProductServiceGrpc {
           getAddProductMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              sep3.protobuf.Product,
-              com.google.protobuf.Int32Value>(
+              sep3.protobuf.RequestAddProduct,
+              sep3.protobuf.ProductData>(
                 service, METHODID_ADD_PRODUCT)))
         .addMethod(
-          getGetProductMethod(),
+          getGetProductsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.google.protobuf.Int32Value,
-              sep3.protobuf.Product>(
-                service, METHODID_GET_PRODUCT)))
+              sep3.protobuf.RequestGetProducts,
+              sep3.protobuf.ResponseGetProducts>(
+                service, METHODID_GET_PRODUCTS)))
         .build();
   }
 
@@ -375,7 +375,7 @@ public final class ProductServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
               .addMethod(getAddProductMethod())
-              .addMethod(getGetProductMethod())
+              .addMethod(getGetProductsMethod())
               .build();
         }
       }

@@ -1,7 +1,13 @@
-C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\src\main\java\sep3\sep3tier3v1\configs\GrpcConfig.java
-C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ProductOrBuilder.java
 C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\src\main\java\sep3\sep3tier3v1\service\ProductServiceImpl.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\RequestGetProductsOrBuilder.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\RequestAddProductOrBuilder.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\RequestAddProduct.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\src\main\java\sep3\sep3tier3v1\configs\GrpcConfig.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\RequestGetProducts.java
 C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\src\main\java\sep3\sep3tier3v1\Sep3Tier3V1Application.java
-C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\Product.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ProductData.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ResponseGetProductsOrBuilder.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ResponseGetProducts.java
 C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ProductProto.java
+C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\java\sep3\protobuf\ProductDataOrBuilder.java
 C:\GitLocalLaptop\SEP3_Project\SEP3Tier3V1\target\generated-sources\protobuf\grpc-java\sep3\protobuf\ProductServiceGrpc.java

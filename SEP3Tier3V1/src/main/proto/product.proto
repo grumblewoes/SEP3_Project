@@ -8,12 +8,12 @@ option java_outer_classname = "ProductProto";
 
 // Consider Product Service after packaging
 service ProductService {
-  rpc addProduct(Product) returns (google.protobuf.Int32Value) {};
-  rpc getProduct(google.protobuf.Int32Value) returns (Product) {};
+  rpc addProduct(RequestAddProduct) returns (ProductData) {};
+  rpc getProducts(RequestGetProducts) returns (ResponseGetProducts) {};
 
 }
 
-message Product {
+message ProductData {
   int32 id = 1;
   string name = 2;
   string manufacturer = 3;
@@ -21,3 +21,20 @@ message Product {
   double price = 5;
   int32 stock =6;
 }
+message RequestAddProduct {
+
+  string name = 1;
+  string manufacturer = 2;
+  string description = 3;
+  double price = 4;
+  int32 stock =5;
+}
+
+message RequestGetProducts {
+  optional string productName = 1;
+  optional int32 productId = 2;
+}
+message ResponseGetProducts {
+ repeated ProductData products = 1;
+}
+
