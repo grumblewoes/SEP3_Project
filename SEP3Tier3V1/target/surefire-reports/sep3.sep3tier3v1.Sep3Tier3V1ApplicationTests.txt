@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: sep3.sep3tier3v1.Sep3Tier3V1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.027 s - in sep3.sep3tier3v1.Sep3Tier3V1ApplicationTests

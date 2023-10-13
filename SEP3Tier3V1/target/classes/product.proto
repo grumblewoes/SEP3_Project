@@ -1,0 +1,40 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "sep3.protobuf";
+option java_outer_classname = "ProductProto";
+
+// Consider Product Service after packaging
+service ProductService {
+  rpc addProduct(RequestAddProduct) returns (ProductData) {};
+  rpc getProducts(RequestGetProducts) returns (ResponseGetProducts) {};
+
+}
+
+message ProductData {
+  int32 id = 1;
+  string name = 2;
+  string manufacturer = 3;
+  string description = 4;
+  double price = 5;
+  int32 stock =6;
+}
+message RequestAddProduct {
+
+  string name = 1;
+  string manufacturer = 2;
+  string description = 3;
+  double price = 4;
+  int32 stock =5;
+}
+
+message RequestGetProducts {
+  optional string productName = 1;
+  optional int32 productId = 2;
+}
+message ResponseGetProducts {
+ repeated ProductData products = 1;
+}
+
